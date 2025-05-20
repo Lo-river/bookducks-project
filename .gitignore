@@ -1,5 +1,21 @@
-# Ignore Mac system files and VS Code settings in root
+# Backend node, cache och temp
+backend/node_modules/
+backend/.cache/
+backend/build/
+backend/.tmp/
+
+# Frontend node-modules
+frontend/node_modules/
+
+# Frontend source-maps
+frontend/css/*.css.map
+
+#Public folder keps coming back
+public/
+
+# OS/macOS
 .DS_Store
-.vscode/
+
+# Environment
 .env
-node_modules/
+
