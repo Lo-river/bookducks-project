@@ -1,0 +1,12 @@
+# Strapi / Node.js / npm / Mac / VS Code
+node_modules/
+build/
+.cache/
+.tmp/
+.env
+*.sqlite
+*.db
+*.log
+public/uploads/
+.DS_Store
+.vscode/
