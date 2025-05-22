@@ -1,18 +1,217 @@
-/* Error: Undefined variable.
- *   ,
- * 3 |   font-family: $font-stack;
- *   |                ^^^^^^^^^^^
- *   '
- *   frontend/scss/_layout.scss 3:16  @use
- *   frontend/scss/main.scss 2:1      root stylesheet */
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Londrina+Outline&family=Londrina+Shadow&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Fragment+Mono:ital@0;1&family=Londrina+Outline&family=Londrina+Shadow&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Urbanist:ital,wght@0,900;1,900&display=swap");
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: Undefined variable.\a   \2577 \a 3 \2502    font-family: $font-stack;\a   \2502                 ^^^^^^^^^^^\a   \2575 \a   frontend/scss/_layout.scss 3:16  @use\a   frontend/scss/main.scss 2:1      root stylesheet";
+body, h1, h2, h3, h4, h5, p, ol, ul {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+input, textarea, select, button {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  border: none;
+  outline: none;
+}
+
+article {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: whitesmoke;
+}
+
+img {
+  max-height: 300px;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 2px;
+}
+
+h1 {
+  color: #3f3f3f;
+  font-family: "Urbanist";
+  font-weight: 900;
+  letter-spacing: 0.1rem;
+  font-size: 45px;
+  margin-top: 1.5rem;
+  margin-left: 2.5rem;
+}
+
+h2 {
+  font-size: 16px;
+}
+
+h3 {
+  font-size: 14px;
+  font-weight: 400;
+  margin-bottom: 1rem;
+  color: #8d8d8d;
+}
+
+#book-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.book-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-radius: 6px;
+  padding: 1rem;
+}
+.book-card p {
+  color: #9c9c9c;
+  font-size: 0.8rem;
+}
+.book-card .title-author {
+  max-width: 80%;
+}
+.book-card .title-author p {
+  color: #9c9c9c;
+}
+.book-card .pages-published {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+.book-card .pages-published p {
+  color: #9c9c9c;
+  width: 100%;
+}
+
+.modal {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #717171;
+}
+
+.modal-content {
+  background-color: whitesmoke;
+  padding: 2rem 2rem 1.5rem 2rem;
+  border-radius: 12px;
+  position: relative;
+  width: 100%;
+  max-width: 350px;
+  -webkit-box-shadow: 0 4px 32px rgba(0, 0, 0, 0.1607843137);
+          box-shadow: 0 4px 32px rgba(0, 0, 0, 0.1607843137);
+}
+
+.close {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  font-size: 2rem;
+  color: #a5a5a5;
+  cursor: pointer;
+}
+
+#auth-tabs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+#auth-tabs .tab {
+  border: none;
+  background: none;
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  color: #848484;
+  border-bottom: 2px solid transparent;
+}
+#auth-tabs .tab.active {
+  color: #2b2b2b;
+  border-bottom: 2px solid #4f626c;
+}
+
+.auth.form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.7rem;
+}
+.auth.form input, .auth.form button {
+  padding: 0.6rem;
+  border-radius: 5px;
+  border: 1px solid #e2e2e2;
+  font-size: 1rem;
+}
+.auth.form button {
+  background: #4f626c;
+  border: none;
+  color: white;
+  font-weight: bold;
+  margin-top: 0.5rem;
+  cursor: pointer;
+  -webkit-transition: background 0.2s;
+  transition: background 0.2s;
+}
+.auth.form button:hover {
+  background: #59b4ed;
 }

@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "reading_list_items",
+  "info": {
+    "singularName": "reading-list-item",
+    "pluralName": "reading-list-items",
+    "displayName": "readingListItem",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "user": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user"
+    },
+    "book": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::book.book"
+    }
+    ,
+    "rating": {
+      "type": "integer",
+      "max": 10,
+      "min": 1
+    }
+  }
+}

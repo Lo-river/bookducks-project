@@ -3,11 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    
     <script src="js/script.js" defer></script>
+    <script src="js/auth.js" defer></script>
     
     <title>Bookducks</title>
 </head>
 <body>
-    
+    <header>
+        <h1>BookDucks</h1>
+        <button id="auth-modal-btn">Registrera/Logga in</button>
+        <div id="auth-modal" class="modal" style="display: none;">
+            <div class="modal-content">
+                <span id="close-auth-modal" class="close">&times;</span>
+                <div id="auth-tabs">
+                    <button id="show-login" class="tab active">Logga in</button>
+                    <button id="show-register" class="tab">Registrera</button>
+                </div>
+                <form id="login-form" class="auth-form">
+                    <h3>Logga in</h3>
+                    <input type="text" autocomplete="username" id="login-identifier" placeholder="Användarnamn eller e-post" required>
+                    <input type="password" autocomplete="current-password" id="login-password" placeholder="Lösenord" required>
+                    <button type="submit">Logga in</button>
+                </form>
+                <form id="register-form" class="auth-form" style="display: none";>
+                    <h3>Registrera</h3>
+                    <input type="text" autocomplete="username" id="register-username" placeholder="Användarnamn" required>
+                    <input type="email" autocomplete="email" id="register-email" placeholder="E-post" required>
+                    <input type="password" autocomplete="current-password" id="register-password" placeholder="Lösenord" required>
+                    <button type="submit">Registrera</button>
+                </form>
+            </div>
+        </div>
+        <div id="user-info" style="display: none;">
+            <p id="welcome-text"></p>
+            <button id="logout-btn">Logga ut</button>
+        </div>
+
+        <button id="show-reading-list" style="display: none;"> Läslista</button>
+        <section id="reading-list-section" style="display: none;"></section>
+
+    </header>
+
+    <main>
+        <section id="book-list"></section>
+    </main>
 </body>
 </html>
+
