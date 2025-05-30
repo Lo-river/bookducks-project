@@ -1,26 +1,22 @@
+# node modules
 node_modules/
 
-# Backend node, cache och temp
-backend/node_modules/
-backend/.cache/
-backend/build/
-backend/.tmp/
-backend/public/
-
-# Frontend node-modules och temp
+# compiled CSS and sourcemaps
 frontend/node_modules/
 frontend/public/
 frontend/css/themes/
 frontend/css/*.min.css
 frontend/css/*.css.map
+css/*.css.map
 
 
 
-# Undvik mappar/filer i root
+
+# system and temp files
 public/
 .DS_Store
 .env
 
-# Extra – ignorera gamla mappar/experiment
-book/
+# old/test projects
+book/ducks-project/
 ducks-project/

@@ -124,8 +124,7 @@
             background-image: url('../assets/logo/bookducks-logo-white.svg');
            }
           #logout-btn {
-            // background-color: #70b77e;
-            // background-color: #F4611F;
+
             background-color: white;
           
           }
@@ -133,28 +132,28 @@
         
 
           h1 {
-            // color: #f7c948;
+
             color: #f9c243;
           }
 
-          .show-reading-list-container {
+          // .show-reading-list-container {
 
-            // background-color: #f9c243cf;
-            background-color: #ffb300cf;
-            background-color: #ff5100c0;
-            padding: 1rem !important;
-          }
+          //   background-color: #ffb300cf;
+
+          // }
 
           #show-reading-list {
             // background-color: transparent;
             // background-color: #f9c243;
             // background-color: #d04200;
             background-color: #1d1d1d;
-            border: 2px #d04200 solid !important;
+            // border: 2px #d04200 solid !important;
             color: white;
-            letter-spacing: 1.5px !important;
-            font-size: 1rem !important;
-            border: 2px solid #1d1d1d !important;
+            border-bottom: 2px solid #f9c243;
+            padding: 5px 15px !important;
+            border-radius: 0 !important;
+
+            // border: 2px solid #1d1d1d !important;
             // border: 2px solid rgb(255, 255, 255) !important;
           }
 
@@ -403,12 +402,23 @@
         background-color: #8696ff;
         color: white;
         // border: #7b3abc solid 3px;
+        // border: #e6ccff solid 8px;
+        // border-bottom: none;
+        // font-size: 1.2rem;
+        // letter-spacing: 1px;
+        // padding: 0.4rem;
+        // height: 60px;
+
+
+        @media (min-width: 600px) {
         border: #e6ccff solid 8px;
         border-bottom: none;
         font-size: 1.2rem;
         letter-spacing: 1px;
         padding: 0.4rem;
         height: 60px;
+
+        }
       }
 
 

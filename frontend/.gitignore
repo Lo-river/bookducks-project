@@ -1,23 +1,28 @@
-# Backend node, cache och temp
-backend/node_modules/
-backend/.cache/
-backend/build/
-backend/.tmp/
-backend/public/
 
-# Frontend node-modules och temp
-# frontend/node_modules/
-frontend/public/
-frontend/css/themes/
+
+
+
+# compiled CSS and sourcemaps
 frontend/css/*.min.css
 frontend/css/*.css.map
 css/*.css.map
+frontend/css/themes/ 
+frontend/public/ 
 
-# Undvik mappar/filer i root
-public/
+
+# ignore auto-generated uploads
+# but keep .gitkeep to preserve folder structure
+
+frontend/public/uploads/*
+!frontend/public/uploads/.gitkeep
+
+
+# system and temp files
+
 .DS_Store
 .env
 
-# Extra – ignorera gamla mappar/experiment
-book/
+
+# old/test projects
+
 ducks-project/
