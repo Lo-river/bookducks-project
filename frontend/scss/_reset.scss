@@ -1,9 +1,17 @@
 *,
 *::before,
 *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
     box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+    margin:0;
+    padding: 0px;
     
 }
 
@@ -17,7 +25,12 @@ body{
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
     line-height: 1.5; 
+    
       
+}
+
+span {
+    line-height: 80%;
 }
 
 a{
@@ -30,11 +43,12 @@ ul, ol {
 }
 
 input, textarea, select, button {
-    font-family: inherit;
+  
     font-size: inherit;
     line-height: inherit;
     border: none;
     outline: none;
+  
     
 }
 

@@ -1,0 +1,192 @@
+// .reading-list-section{
+//     display: flex;
+// }
+
+// Tillfälligt stängd för att testa reading-list slut
+// .reading-list-wrapper{
+//     display: flex;
+//     flex-direction: row;
+//     overflow: auto;
+//     scroll-snap-type: x mandatory;
+//     gap: 3rem;
+//     padding-bottom: 1rem;
+//     margin-bottom: 0.1rem;
+
+//     -webkit-overflow-scrolling: touch ;
+//       padding-left: 0.5rem;    
+//       margin-top: 1rem;
+
+//   @media (min-width: 600px) {
+//     border-top: 0.2rem solid;
+
+
+//   }
+
+// }
+
+// .reading-list-container {
+//   border-bottom: 2px solid;
+//   max-width: 1200px;
+//   margin: 0 auto;
+//   padding: 1rem;
+// }
+
+.reading-list-controls {
+    display: flex;
+    justify-content: space-between;
+}
+
+#sort-select {
+    margin-right: 1rem ;
+
+}
+
+.reading-list-wrapper {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 1.5rem;
+  padding: 1rem 0;
+  scroll-padding: 0 1rem;
+  overflow-y: hidden;
+
+    &::-webkit-scrollbar {
+    height: 10px;                  
+  }
+  &::-webkit-scrollbar-track {
+    background: transparent;      
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: #f9c243;    //CHANGE IN THEME 
+    border-radius: 4px;
+    border: 2px solid transparent;
+    background-clip: content-box;  
+  }
+  
+}
+
+.reading-list-item {
+    position: relative;
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+    // max-width: 110px;
+    border-radius: 10px;    
+    // padding-left: 10px;
+    padding: 1.2rem 0.9rem;
+
+    img, #cover 
+        {
+        height:170px !important;
+        border-radius: 2px;
+    }
+
+    .reading-list-info{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .reading-list-item, .heart-btn {
+    position: absolute;
+    left: 5.4rem;
+    bottom: 4.5rem;
+    z-index: 1;
+    background-color: #fff;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #000000;
+    padding: 0;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    }
+
+
+    .reading-list-item, .heart-icon {
+        width: 16px;
+        margin-top: 2px;
+
+    }
+
+    strong, .reading-list-title {
+        font-size: 11px ;
+        line-height:0%;
+    }
+
+    @media (min-width: 768px) {
+        // width: calc(50% - 0.5rem);
+
+    
+        
+        .reading-list-item, .heart-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            left: 5.5rem !important;
+            bottom: 2.8rem !important;            
+            width: 24px;
+            height: 24px;
+            z-index: 1;
+            padding: 0.8rem !important;
+            border-radius: 50%;
+            // border: 1px solid #000000 !important;
+            // box-shadow: 0 5px 10px 0 rgba(255, 255, 255, 0.996), 0 6px 20px 0 rgba(255, 255, 255, 0.815);
+            cursor: pointer;
+            transition: transform 0.2s ease;
+            }
+
+
+        .reading-list-item, img .heart-icon {
+            width: 16px;
+            margin-top: 20px !important;
+            top: 25rem !important;
+            
+
+        }
+        
+    }
+
+    
+
+    @media (min-width: 1024px) {
+        // width: calc(33.333% - 0.5rem);
+
+
+
+
+        .reading-list-item, .heart-btn {
+            position: absolute;
+            left: 5.3rem;
+            bottom: 4.5rem;
+            z-index: 1;
+
+            // top: 200px;
+            // right: 8px;
+            background-color: #fff;
+            border-radius: 50%;
+            width: 24px;
+            height: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #ccc;
+            padding: 0;
+            cursor: pointer;
+            transition: transform 0.2s ease;
+        }
+
+
+
+        .reading-list-item, .heart-icon {
+            top: 2rem;
+            width: 16px;
+            margin-top: 2px;
+
+        }
+
+    }
+
+}

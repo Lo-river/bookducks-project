@@ -11,7 +11,7 @@
     "/public/**",
     "/backend/**",
     "/themes/**",
-    "/frontend/css/styles.css.map"
+    "/frontend/css/main.css.map"
 
   ],
   "liveSassCompile.settings.generateMap": false,

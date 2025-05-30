@@ -1,0 +1,152 @@
+
+
+#book-list {
+  display: flex;
+  flex-wrap: wrap;          
+  justify-content: center;   
+  gap: 2rem;                  
+
+  margin: 0 auto;  
+  margin-top: 0.5rem !important;
+  padding-top: 0.05rem;
+  // padding: 1rem;
+  max-width: 1400px;
+  width: 100%;
+
+  .reading-list-info {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.book-card {
+  flex: 0 0 260px;            
+  width: 100%;
+  max-width: 286px;
+  margin: 1rem;              
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  text-align: center;
+  gap: 1rem;
+
+  img,
+  .cover {
+    width: 180px !important;
+    margin-bottom: 0.5rem;
+  }
+
+  .book-title {
+    font-weight: bold;
+    font-size: 13px;
+  }
+
+  .book-author {
+    font-family: monospace;
+    font-size: 0.7rem;
+  }
+
+  p,
+  span {
+    font-size: 10px;
+    text-align: left;
+  }
+
+  @media (min-width: 600px) {
+    flex-direction: row;
+    // justify-content: flex-start;
+    justify-content: center;
+    text-align: left;
+    min-width: 312px ;
+    gap: 1rem;
+    margin: 1rem;
+
+    img {
+      width: 150px !important;
+      height: auto;
+      max-height: 227px;
+    }
+
+    .book-author {
+      font-size: 0.875rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    margin: 1rem;
+
+    img {
+      width: 150px;
+      height: auto;
+    }
+  }
+}
+
+.book-card-content {
+  border: 2px solid;
+  padding: 1rem;
+  gap: 2rem;
+  border-radius: 4px;
+
+  #cover {
+    border-radius: 5px;
+  }
+
+  @media (min-width: 600px), (min-width: 1024px) {
+    min-height: 200px;
+    display: flex;
+    padding: 1.2rem;
+    gap: 1rem;
+    border-radius: 4px;
+
+    #cover {
+      border-radius: 8px;
+    }
+  }
+}
+
+.cover-wrapper {
+  position: relative;
+  display: inline-block;
+
+  img {
+    display: block;
+    width: 150px;
+  }
+
+  .cover-wrapper,
+  .heart-btn {
+    position: absolute;
+    bottom: 15px;
+    right: 8px;
+    background-color: #fff;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #ccc;
+    padding: 0;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+
+    .heart-icon {
+      width: 18px !important;
+      margin-top: 10px;
+    }
+
+    &:hover {
+      transform: scale(1.1);
+    }
+
+    &.remove-btn {
+      background-color: white;
+    }
+
+    @media (min-width: 600px) {
+      top: 186px;
+    }
+  }
+}

@@ -1,0 +1,546 @@
+
+
+.theme-light {
+
+    background-color: #efefeb ;
+    color: #1D1D1D;
+
+      .body-wrapper{
+
+
+        @media (min-width: 600px) {  
+            margin-top: 50px;   
+            border-radius: 50px 50px 0  0;
+    }
+  }
+
+
+    header {
+
+
+      body.light-theme #bookducks-logo-header {
+        background-image: url('../assets/logo/bookducks-logo-black.svg');     
+      }  
+
+        #logout-btn {
+            color: #f9c243 ;
+            margin-top: 5rem;;
+            border: 1px solid rgba(0, 0, 0, 0.22);
+            box-shadow: 1px 1.5px 2px 0.3px  rgb(55, 55, 55);
+        }
+
+        h1 {
+          // color: #f7c948;
+          color: #f8b71e;
+        }
+
+
+      .show-reading-list-container {
+        background-color: #efefebbf;
+        box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+
+        
+
+        #show-reading-list {
+
+
+            color: #f9c243 ;
+            border: 1px solid rgba(0, 0, 0, 0.22);
+            box-shadow: 1px 1.5px 2px 0.3px  rgb(55, 55, 55);
+        }
+
+      }
+    }
+
+
+  #sort-select{
+    margin-left: 1rem;
+    // border: 1px solid rgb(71, 67, 67);
+  }
+
+
+  .reading-list-container {
+    border-color: #ffb300;
+
+    // .reading-list-wrapper{
+    //       box-shadow:0 2px 6px #0000001a
+    // }
+
+
+
+      // .reading-list-item{
+      //   border: #e6592e solid 1px !important;
+      // }
+    // }
+  }
+
+  // .book-card {
+  //   background-color: #eaffea;
+  //   border: 1px solid #00a38b;
+  //   box-shadow:0 2px 6px #0000001a;
+  // }
+
+  .book-card-content {
+    border-color: #555555;
+  }
+
+  .heart-btn {
+    background-color: transparent;
+  }
+
+  footer {
+    background-color: #53B7AB;
+    color: #000000;
+
+  }
+
+}
+
+
+
+
+.theme-dark {
+
+    // background-color: #1D1D1D ;
+    background-color: #1F1F1F ;
+    //background-color: #1E1E1E ; //MAybe instead
+    // background-color: #2C2C2C;
+    background-color: #1d1d1d;
+    color: #eee;
+
+      .body-wrapper{
+
+ 
+
+        @media (min-width: 600px) {  
+            margin-top: 50px;   
+            border-radius: 50px 50px 0  0;
+    }
+  }
+
+      header {
+
+         #bookducks-logo-header {
+            background-image: url('../assets/logo/bookducks-logo-white.svg');
+           }
+          #logout-btn {
+            // background-color: #70b77e;
+            // background-color: #F4611F;
+            background-color: white;
+          
+          }
+
+        
+
+          h1 {
+            // color: #f7c948;
+            color: #f9c243;
+          }
+
+          .show-reading-list-container {
+
+            // background-color: #f9c243cf;
+            background-color: #ffb300cf;
+            background-color: #ff5100c0;
+            padding: 1rem !important;
+          }
+
+          #show-reading-list {
+            // background-color: transparent;
+            // background-color: #f9c243;
+            // background-color: #d04200;
+            background-color: #1d1d1d;
+            border: 2px #d04200 solid !important;
+            color: white;
+            letter-spacing: 1.5px !important;
+            font-size: 1rem !important;
+            border: 2px solid #1d1d1d !important;
+            // border: 2px solid rgb(255, 255, 255) !important;
+          }
+
+          
+
+
+      }
+
+      #sort-select {
+        background-color:#1d1d1d ;
+        color: #f9c243;
+        border: #facd6467  1px solid ;
+        border-bottom: none;
+        border-radius: 5px 5px 0 0;
+        padding: 5px;
+        // border-radius: ;
+      }
+
+    .reading-list-wrapper{
+      // background-color:  #323232 ;
+      border: 1px solid #F8F7E5;
+      border: 1px solid transparent;
+      // background-color: #504e0947;
+      // background-image: linear-gradient(rgba(241, 241, 0, 0.051), #1c1c1c );
+      border-radius: 25px;
+
+
+
+
+    // .reading-list-item{
+    //   border: #e6592e solid 1px !important;
+    // }
+
+    }      
+
+          // .reading-list-wrapper {
+          // display: flex;
+          // overflow-x: auto;
+          // scroll-snap-type: x mandatory;
+          // gap: 1.5rem;
+          // padding: 1rem 0;
+          // scroll-padding: 0 1rem;
+          // overflow-y: hidden;
+          // background-color: #e6ccff;
+          // border-radius: 15px;
+
+          //-   &::-webkit-scrollbar {
+          //   height: 10px;                  
+          // }
+          //- &::-webkit-scrollbar-track {
+          //-   // background: transparent;      
+          //   background: #FC9AAE;      
+          // }
+          //- &::-webkit-scrollbar-thumb {
+          //   background-color: #F3D4DC;    
+          //   border-radius: 4px;
+          //   border: 2px solid transparent;
+          //   background-clip: content-box;  
+          // }
+    
+    strong.reading-list-title {
+      color: #ffffff ;
+      letter-spacing: 0.16rem !important;
+      font-weight: 350;
+    }
+    .book-title {
+      color: #e7bb8d ;
+    }
+
+    .book-card {
+      // background-color:  #323232 ;
+      // background-color: #2b2b2b;
+      // border: 1px solid #444;
+      //   box-shadow:0 2px 6px #0000001a;
+          // background-color: gradient #242424;
+          background-image: linear-gradient(rgba(53, 53, 53, 0.545), #171717) ;
+
+
+      #cover {
+        // border: solid 0.2rem white;
+                box-shadow: 2px 3px  2px #fffffff6;
+
+      }
+    }
+
+    .heart-btn {
+      background-color: transparent;
+    }
+
+    footer {
+      background-color: #191919;
+      color: #F8F7E5;
+    }
+
+    // .book-title {
+    //   color: #df6228;
+
+    // }
+
+  // .book-author {
+
+  // }
+
+  // p, span {
+
+  // }
+
+}
+
+// Stop .theme-dark
+
+
+
+
+.theme-neutral {
+
+   
+    color: #2a2a2a;
+  
+  
+    @media (min-width: 600px) {
+        //  background-color: #F2782B;
+        //  background-color: #ff7c2b;
+         background-color: #F3D4DC;
+
+    }
+//     @media (min-width: 1024px) {
+
+  .body-wrapper{
+    background-color: #FAD079;
+    border: 1px solid black;
+    border-bottom: none;
+ 
+
+        @media (min-width: 600px) {  
+            margin-top: 50px;   
+            border-radius: 50px 50px 0  0;
+    }
+  }
+
+
+      header {
+
+          #header-neutral-theme 
+          .header-top {
+            @media (min-width: 600px) {
+              justify-content: space-around;
+          }
+
+           @media (min-width: 1024px) {}
+
+        }
+
+
+            body.neutral-theme #bookducks-logo-header {
+              background-image: url('../assets/logo/bookducks-logo-black.svg');     
+              
+            }
+        #bookducks-logo-header {
+          max-width: 170px;
+            // border: salmon 2px solid;
+          margin-top: 3rem;
+          margin-left: 1rem;
+
+
+
+
+
+          // @media (min-width: 768px) {
+          //   max-width: 300px;
+          // }
+
+
+        @media (min-width: 600px) {
+
+          left: 12rem;
+        }
+
+
+            @media (min-width: 1024px) {}
+        }
+
+        #logout-btn {
+        // color: #f9c243 ;
+        // color: #df6228;
+
+            background-color: #fdae0f;
+            border: 2px solid black !important;
+            box-shadow: 1px 1px 2px 0.3px  rgb(55, 55, 55);
+            padding-bottom: 26px;
+               
+            &:hover {
+              background-color: #53B7AB;
+              color: #fff2d8;
+            }  
+          }
+
+        h1 {
+        
+          // color: #70b77e;
+          color: #27a28f;
+        }
+
+
+
+
+        .show-reading-list-container {
+          background-color: #aadae7bf;
+
+          #show-reading-list {
+            background-color: #FBE1AE;
+            border: 2px solid black !important;
+            box-shadow: 1px 1px 2px 0.3px  rgb(55, 55, 55);
+
+
+            //             background-color: #fdae0f;
+            // border: 2px solid black !important;
+            // box-shadow: 1px 1px 2px 0.3px  rgb(55, 55, 55);
+            // padding-bottom: 26px;
+               
+            &:hover {
+              background-color: #53B7AB;
+              color: #fff2d8;
+            }  
+          }
+
+        }
+
+      }
+
+      .reading-list-h2 {
+        // background-color: #e6ccff;
+        // border: #e6ccff solid 8px;
+        border-radius: 8px  8px  0 0   !important ;
+        padding: 0.2rem 1rem;
+
+        // color: #350085;
+        }
+
+
+       select, .neutral-theme {
+        border-radius: 10px  10px  0 0   !important ;
+      }
+
+      #sort-select {
+        background-color: #8696ff;
+        color: white;
+        // border: #7b3abc solid 3px;
+        border: #e6ccff solid 8px;
+        border-bottom: none;
+        font-size: 1.2rem;
+        letter-spacing: 1px;
+        padding: 0.4rem;
+        height: 60px;
+      }
+
+
+      .reading-list-wrapper {
+          display: flex;
+          overflow-x: auto;
+          scroll-snap-type: x mandatory;
+          gap: 1.5rem;
+          padding: 1rem 0;
+          scroll-padding: 0 1rem;
+          overflow-y: hidden;
+          background-color: #e6ccff;
+          border-radius:15px 15px 00;
+
+            &::-webkit-scrollbar {
+            height: 10px;                  
+          }
+          &::-webkit-scrollbar-track {
+            // background: transparent;      
+            // background: #FC9AAE;  
+            background: #5302f4;  
+            // border-radius: 10px;    
+          }
+          &::-webkit-scrollbar-thumb {
+            // background-color: #d4f3dc;    
+            // background-color: #843cd5;    
+            background-color: #ff0090;    
+            border-radius: 4px;
+            border: 2px solid transparent;
+            background-clip: content-box;  
+          }
+  
+}
+      
+
+
+
+
+      .book-card {
+        // background-color: #eaffea;
+        background-color: #caf9ca;
+        // border: 1px solid #00a38b;
+        border: 2.5px solid #7b3abc;
+        border-radius: 10px;
+        box-shadow:0 2px 6px #0000001a;
+      }
+
+      .book-card-content{
+
+        border-color: #CCB9DF;
+      }
+
+      .heart-btn {
+        background-color: transparent;
+      }
+      
+
+      footer {
+        background-color: #65d7c9;
+        color: #000000;
+      }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+// Gamla:
+// OLD.theme-light {
+
+//     background-color: #efefeb ;
+//     color: #1D1D1D;
+
+//     header {
+
+//         #logout-btn {
+//             color: #f9c243 ;
+//         }
+//     }
+
+
+//   h1 {
+     // color: #f7c948;
+//     color: #f9c243;
+//   }
+
+
+
+//   .show-reading-list-container {
+
+//     background-color: #efefebbf;
+
+//   }
+
+//   .reading-list-container {
+//     border-color: #ffb300;
+// }
+
+//    #show-reading-list {
+//     background-color: #f9c243;
+//     border: 2px solid black !important;
+//   }
+
+   // .reading-list-wrapper{
+   //   border: rgb(0, 157, 255) solid 1px !important;
+   // }
+
+
+
+  // .reading-list-item{
+   //   border: #e6592e solid 1px !important;
+   // }
+
+   // .book-card {
+    //   border: 1px solid #00a38b;
+   //     box-shadow:0 2px 6px #0000001a;
+  // }
+
+//   .heart-btn {
+//     background-color: transparent;
+//   }
+
+//   footer {
+//     background-color: #69695d;
+//     color: #F8F7E5;
+//   }
+
+// }

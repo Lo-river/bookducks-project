@@ -1,3 +1,5 @@
+node_modules/
+
 # Backend node, cache och temp
 backend/node_modules/
 backend/.cache/
@@ -11,6 +13,7 @@ frontend/public/
 frontend/css/themes/
 frontend/css/*.min.css
 frontend/css/*.css.map
+
 
 
 # Undvik mappar/filer i root

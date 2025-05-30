@@ -376,12 +376,13 @@ export interface AdminUser extends Struct.CollectionTypeSchema {
 export interface ApiBookBook extends Struct.CollectionTypeSchema {
   collectionName: 'books';
   info: {
+    description: '';
     displayName: 'Book';
     pluralName: 'books';
     singularName: 'book';
   };
   options: {
-    draftAndPublish: false;
+    draftAndPublish: true;
   };
   attributes: {
     author: Schema.Attribute.String & Schema.Attribute.Required;
@@ -444,13 +445,13 @@ export interface ApiReadingListItemReadingListItem
   };
 }
 
-export interface ApiThemeTheme extends Struct.CollectionTypeSchema {
-  collectionName: 'themes';
+export interface ApiSiteSettingSiteSetting extends Struct.SingleTypeSchema {
+  collectionName: 'site_settings';
   info: {
     description: '';
-    displayName: 'theme';
-    pluralName: 'themes';
-    singularName: 'theme';
+    displayName: 'Site setting';
+    pluralName: 'site-settings';
+    singularName: 'site-setting';
   };
   options: {
     draftAndPublish: false;
@@ -459,15 +460,16 @@ export interface ApiThemeTheme extends Struct.CollectionTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    isActive: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<true>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
-    localizations: Schema.Attribute.Relation<'oneToMany', 'api::theme.theme'> &
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::site-setting.site-setting'
+    > &
       Schema.Attribute.Private;
-    name: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
-    theme1: Schema.Attribute.String;
-    theme2: Schema.Attribute.String;
-    theme3: Schema.Attribute.String;
+    theme: Schema.Attribute.Enumeration<['neutral', 'light', 'dark']> &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'neutral'>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -985,7 +987,7 @@ declare module '@strapi/strapi' {
       'admin::user': AdminUser;
       'api::book.book': ApiBookBook;
       'api::reading-list-item.reading-list-item': ApiReadingListItemReadingListItem;
-      'api::theme.theme': ApiThemeTheme;
+      'api::site-setting.site-setting': ApiSiteSettingSiteSetting;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
       'plugin::i18n.locale': PluginI18NLocale;

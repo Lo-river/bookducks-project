@@ -1,0 +1,118 @@
+/* 1) Grundlayout (mobile first) */
+#book-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.book-card {
+  display: flex;
+  flex-direction: column;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: transform .2s;
+}
+.book-card:hover {
+  transform: translateY(-4px);
+}
+.book-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.book-card .book-info {
+  padding: .5rem;
+  flex: 1;
+}
+.book-card .heart-btn {
+  margin: .5rem;
+  align-self: flex-end;
+}
+
+/* 2) Tablet (från 768px) */
+@media (min-width: 768px) {
+  #book-list {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  }
+}
+
+/* 3) Desktop (från 1024px) */
+@media (min-width: 1024px) {
+  #book-list {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+  header h1 {
+    font-size: 2rem;
+  }
+  header {
+    flex-wrap: nowrap;
+  }
+}
+
+/* 4) Horisontellt scrollbar för läslistan */
+.reading-list-wrapper {
+  display: flex;
+  gap: .5rem;
+  padding: 1rem 0;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+}
+.reading-list-wrapper .reading-list-item {
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+  width: 120px;
+}
+/* snyggare scrollbar */
+.reading-list-wrapper::-webkit-scrollbar {
+  height: 6px;
+}
+.reading-list-wrapper::-webkit-scrollbar-thumb {
+  background: rgba(0,0,0,0.2);
+  border-radius: 3px;
+}
+
+/* 5) Container och header */
+.body-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+header h1 {
+  font-size: 1.5rem;
+  margin: .5rem 0;
+}
+header #user-info {
+  flex: 1;
+  text-align: center;
+}
+main {
+  margin-top: 1rem;
+}
+
+/* 6) Läslista-sektionen */
+#reading-list-section {
+  background: #f8f4eb;
+  padding: 1rem;
+  margin-top: 1rem;
+  border-radius: 8px;
+}
+#reading-list-section .reading-list-title {
+  margin-bottom: .5rem;
+}
+#reading-list-section .reading-list-controls {
+  display: flex;
+  align-items: center;
+  margin-bottom: .5rem;
+}
+#reading-list-section .reading-list-controls select {
+  margin-left: .5rem;
+}

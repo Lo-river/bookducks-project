@@ -1,0 +1,15 @@
+{
+  "name": "bookducks-project",
+  "version": "1.0.0",
+  "description": "Examination project for interaction with CMS",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch frontend/scss:frontend/css --no-source-map"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.89.0"
+  }
+}
