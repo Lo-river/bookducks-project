@@ -9,27 +9,34 @@
     left: 0; top: 0; right: 0; bottom: 0;
     width: 100vw;
     height: 100vh;
-    background-color: #45494bb5;
 
 }
 
 .modal-content{
-    background-color: whitesmoke;
     padding: 2rem 2rem 1.5rem 2rem;
     border-radius: 12px;
     position: relative;
     width: 100%;
     max-width: 350px;
-    min-height: 303px;
+    min-height: 369px;
 
-    box-shadow: 0 4px 32px #00000029;
+
+
+    @media (min-width: 600px) {    
+                max-width: 390px;
+                min-height: 369px;
+            }
+    @media (min-width: 1024px) {
+          max-width: 500px;
+          min-height: 370px;
+    }
+    
 }
 
 .close {
     position: absolute;
     top: 12px; right: 16px;
     font-size: 2rem;
-    color: #a5a5a5;
     cursor: pointer;
 }
 
@@ -45,45 +52,56 @@
         padding: 0.5rem 1rem;
         font-weight: bold;
         cursor: pointer;
-        color: #848484;
         border-bottom: 2px solid transparent;
 
-        &.active {
-            color: #2b2b2b;
-            border-bottom: 2px solid #4f626c;
-        }
     }
 }
-
-.auth-form{
-    display: flex;
-    flex-direction: column;
-        // border: 2px solid orange !important;
-        gap: 1rem;
-
-}
-.auth.form {
-    display: flex;
-    flex-direction: column;
-    gap: 0.7rem;
-
-    input, button {
-        padding: 0.6rem;
+#auth-modal-btn{
+        padding:  0.6rem 1.5rem;
         border-radius: 5px;
-        border: 1px solid #e2e2e2;
         font-size: 1rem;
-    }
-
-    button{
-        background: #4f626c;
-        border: none;
-        color: white;
         font-weight: bold;
         margin-top: 0.5rem;
         cursor: pointer;
         transition: background 0.2s;
-        &:hover {
-            background: #59b4ed;
+}
+
+
+.auth-form{
+    display: flex;
+    flex-direction: column;
+        gap: 1rem;
+}
+
+.auth-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+
+    input, button  {
+        padding: 0.6rem;
+        border-radius: 5px;
+        font-size: 1rem;
+    }
+
+    button{
+        font-weight: bold;
+        margin-top: 0.5rem;
+        cursor: pointer;
+        transition: background 0.2s;
+
+    }
+
+    #login-submit {
+
+        margin-top: 62px !important;
+        
+        @media (min-width: 600px) {    
+            margin-top: 62px !important;
+        }
+
+        @media (min-width: 1024px) {
+            margin-top: 62px !important;
         }
     }
 }

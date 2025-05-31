@@ -1,84 +1,119 @@
 
-
+// Light theme
 .theme-light {
+  background-color: #efefeb;
+  color: #1d1d1d;
 
-    background-color: #efefeb ;
-    color: #1D1D1D;
+    #auth-modal-btn{
+      background: #ffffff;
+      color: #000000;
+      border: solid 1px #9b9b9b70;
 
-      .body-wrapper{
+        &:hover, &:focus{
+        background: #4d4d4df4 !important;
+        color: #ffffff;
 
+        }
+    }
 
-        @media (min-width: 600px) {  
-            margin-top: 50px;   
-            border-radius: 50px 50px 0  0;
+  .modal {
+    background-color: #9a9a9aad;
+    
+  }
+
+  .modal-content {
+    background-color: #d7d7d7;
+    border: 1px #fefefe3d solid !important;
+    box-shadow: 0 4px 32px #0000003d;
+  }
+
+  .close {
+    color: #282828f7;
+  }
+
+  #auth-tabs .tab {
+    border: none;
+    background: none;
+    color: #a5a5a5;
+
+    &.active {
+      color: #000000;
+      border-bottom: 2px solid #242424;
+    }
+  }
+
+  .auth-form {
+    button {
+      background: #fbfbfb !important;
+      color: #000000;
+      transition: background 0.2s;
+
+      &:hover, &:focus{
+        background: #616161 !important;
+        color: #ffffff;
+      }
     }
   }
 
 
-    header {
+  .body-wrapper {
+    @media (min-width: 600px) {
+      margin-top: 50px;
+      border-radius: 50px 50px 0 0;
+    }
+  }
 
+  header {
+    body.light-theme #bookducks-logo-header {
+      background-image: url('../assets/logo/bookducks-logo-black.svg');
+    }
 
-      body.light-theme #bookducks-logo-header {
-        background-image: url('../assets/logo/bookducks-logo-black.svg');     
-      }  
+    #logout-btn {
+      color: #292929;
+      margin-top: 5rem;
+      border: 1px solid rgba(0, 0, 0, 0.22);
+      box-shadow: 1px 1.5px 2px 0.3px rgb(55, 55, 55);
+      transition: background 0.2s;
 
-        #logout-btn {
-            color: #f9c243 ;
-            margin-top: 5rem;;
-            border: 1px solid rgba(0, 0, 0, 0.22);
-            box-shadow: 1px 1.5px 2px 0.3px  rgb(55, 55, 55);
-        }
-
-        h1 {
-          // color: #f7c948;
-          color: #f8b71e;
-        }
-
-
-      .show-reading-list-container {
-        background-color: #efefebbf;
-        box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
-
-        
-
-        #show-reading-list {
-
-
-            color: #f9c243 ;
-            border: 1px solid rgba(0, 0, 0, 0.22);
-            box-shadow: 1px 1.5px 2px 0.3px  rgb(55, 55, 55);
-        }
-
+      &:hover, &:focus{
+        background: #616161 !important;
+        color: #ffffff;
       }
     }
 
+    
+    h1 {
+      color: #007182;
+    }
 
-  #sort-select{
-    margin-left: 1rem;
-    // border: 1px solid rgb(71, 67, 67);
+
+
+    .show-reading-list-container {
+      background-color: #efefebbf;
+
+      #show-reading-list {
+        background-color: #efefeb;
+      color: #292929;
+      margin-top: 5rem;
+      border: 2px solid rgba(0, 0, 0, 0.22);
+      box-shadow: 1px 1.5px 2px 0.3px rgb(55, 55, 55);
+      transition: background 0.2s;
+
+      &:hover, &:focus{
+        background: #616161 !important;
+        color: #ffffff;
+      }
+    }
+    }
+  }
+
+  #sort-select {
+    margin-right: 2rem;
+    border: #ababab solid 1px;
+    padding: 0.2rem;
   }
 
 
-  .reading-list-container {
-    border-color: #ffb300;
-
-    // .reading-list-wrapper{
-    //       box-shadow:0 2px 6px #0000001a
-    // }
-
-
-
-      // .reading-list-item{
-      //   border: #e6592e solid 1px !important;
-      // }
-    // }
-  }
-
-  // .book-card {
-  //   background-color: #eaffea;
-  //   border: 1px solid #00a38b;
-  //   box-shadow:0 2px 6px #0000001a;
-  // }
 
   .book-card-content {
     border-color: #555555;
@@ -89,468 +124,338 @@
   }
 
   footer {
-    background-color: #53B7AB;
+    background-color: #92bbb6;
     color: #000000;
-
   }
-
 }
 
 
 
-
+// Dark theme
 .theme-dark {
+  background-color: #1d1d1d;
+  color: #eee;
 
-    // background-color: #1D1D1D ;
-    background-color: #1F1F1F ;
-    //background-color: #1E1E1E ; //MAybe instead
-    // background-color: #2C2C2C;
-    background-color: #1d1d1d;
-    color: #eee;
+    #auth-modal-btn{
+      background: #ffbc20 !important;
+      color: #000000;
 
-      .body-wrapper{
+        &:hover, &:focus{
+        background: #ffb300 !important;
+        color: white;
+        }
+    }
 
- 
+  .modal {
+    background-color: #191b1c96;
+    
+  }
 
-        @media (min-width: 600px) {  
-            margin-top: 50px;   
-            border-radius: 50px 50px 0  0;
+  .modal-content {
+    background-color: #191919;
+    border: 1px #f9c2435c solid !important;
+    box-shadow: 0 4px 32px #48484814;
+  }
+
+  .close {
+    color: #f9c243;
+  }
+
+  #auth-tabs .tab {
+    border: none;
+    background: none;
+    color: #848484fd;
+
+    &.active {
+      color: white;
+      border-bottom: 2px solid #f9c243;
     }
   }
 
-      header {
+  .auth-form {
+    button {
+      background: #ffbc20 !important;
+      color: #000000;
+      transition: background 0.2s;
 
-         #bookducks-logo-header {
-            background-image: url('../assets/logo/bookducks-logo-white.svg');
-           }
-          #logout-btn {
-
-            background-color: white;
-          
-          }
-
-        
-
-          h1 {
-
-            color: #f9c243;
-          }
-
-          // .show-reading-list-container {
-
-          //   background-color: #ffb300cf;
-
-          // }
-
-          #show-reading-list {
-            // background-color: transparent;
-            // background-color: #f9c243;
-            // background-color: #d04200;
-            background-color: #1d1d1d;
-            // border: 2px #d04200 solid !important;
-            color: white;
-            border-bottom: 2px solid #f9c243;
-            padding: 5px 15px !important;
-            border-radius: 0 !important;
-
-            // border: 2px solid #1d1d1d !important;
-            // border: 2px solid rgb(255, 255, 255) !important;
-          }
-
-          
-
-
+      &:hover, &:focus{
+        background: #ffb300 !important;
+        color: white;
       }
+    }
+  }
 
-      #sort-select {
-        background-color:#1d1d1d ;
-        color: #f9c243;
-        border: #facd6467  1px solid ;
-        border-bottom: none;
-        border-radius: 5px 5px 0 0;
-        padding: 5px;
-        // border-radius: ;
-      }
+  .body-wrapper {
+    @media (min-width: 600px) {
+      margin-top: 50px;
+      border-radius: 50px 50px 0 0;
+    }
+  }
 
-    .reading-list-wrapper{
-      // background-color:  #323232 ;
-      border: 1px solid #F8F7E5;
-      border: 1px solid transparent;
-      // background-color: #504e0947;
-      // background-image: linear-gradient(rgba(241, 241, 0, 0.051), #1c1c1c );
-      border-radius: 25px;
+  header {
+    #bookducks-logo-header {
+      background-image: url('../assets/logo/bookducks-logo-white.svg');
+    }
+
+    #logout-btn {
+      background-color: white;
+    }
+
+    h1 {
+      color: #f9c243;
+    }
+
+    #show-reading-list {
+      background-color: #1d1d1d;
+      color: white;
+      border-bottom: 2px solid #f9c243 !important;
+      padding: 5px 15px !important;
+      border-radius: 0 !important;
+
+        @media (min-width: 600px) {
 
 
-
-
-    // .reading-list-item{
-    //   border: #e6592e solid 1px !important;
-    // }
-
-    }      
-
-          // .reading-list-wrapper {
-          // display: flex;
-          // overflow-x: auto;
-          // scroll-snap-type: x mandatory;
-          // gap: 1.5rem;
-          // padding: 1rem 0;
-          // scroll-padding: 0 1rem;
-          // overflow-y: hidden;
-          // background-color: #e6ccff;
-          // border-radius: 15px;
-
-          //-   &::-webkit-scrollbar {
-          //   height: 10px;                  
-          // }
-          //- &::-webkit-scrollbar-track {
-          //-   // background: transparent;      
-          //   background: #FC9AAE;      
-          // }
-          //- &::-webkit-scrollbar-thumb {
-          //   background-color: #F3D4DC;    
-          //   border-radius: 4px;
-          //   border: 2px solid transparent;
-          //   background-clip: content-box;  
-          // }
+        }
     
-    strong.reading-list-title {
-      color: #ffffff ;
-      letter-spacing: 0.16rem !important;
-      font-weight: 350;
     }
-    .book-title {
-      color: #e7bb8d ;
+  }
+
+  #sort-select {
+    background-color: #1d1d1d;
+    color: #f9c243;
+    border: 1px solid #facd6467;
+    border-bottom: none;
+    border-radius: 5px 5px 0 0;
+    padding: 1px !important;
+  }
+
+  .reading-list-wrapper {
+    border: 1px solid transparent;
+    border-radius: 25px;
+  }
+
+  strong.reading-list-title {
+    color: #ffffff;
+    letter-spacing: 0.16rem !important;
+    font-weight: 350;
+  }
+
+  .book-title {
+    color: #e7bb8d;
+  }
+
+  .book-card {
+    background-image: linear-gradient(rgba(53, 53, 53, 0.545), #171717);
+    border-radius: 6px;
+
+    #cover {
+      box-shadow: 2px 3px 2px #fffffff6;
     }
+  }
 
-    .book-card {
-      // background-color:  #323232 ;
-      // background-color: #2b2b2b;
-      // border: 1px solid #444;
-      //   box-shadow:0 2px 6px #0000001a;
-          // background-color: gradient #242424;
-          background-image: linear-gradient(rgba(53, 53, 53, 0.545), #171717) ;
+  .heart-btn {
+    background-color: transparent;
+  }
 
-
-      #cover {
-        // border: solid 0.2rem white;
-                box-shadow: 2px 3px  2px #fffffff6;
-
-      }
-    }
-
-    .heart-btn {
-      background-color: transparent;
-    }
-
-    footer {
-      background-color: #191919;
-      color: #F8F7E5;
-    }
-
-    // .book-title {
-    //   color: #df6228;
-
-    // }
-
-  // .book-author {
-
-  // }
-
-  // p, span {
-
-  // }
-
+  footer {
+    background-color: #191919;
+    color: #f8f7e5;
+  }
 }
 
-// Stop .theme-dark
 
 
-
-
+// neutral theme
 .theme-neutral {
+  color: #2a2a2a;
 
-   
-    color: #2a2a2a;
-  
-  
-    @media (min-width: 600px) {
-        //  background-color: #F2782B;
-        //  background-color: #ff7c2b;
-         background-color: #F3D4DC;
 
+      #auth-modal-btn {
+      background-color: #fdae0f;
+      border: 2px solid black !important;
+      box-shadow: 1px 1px 2px 0.3px rgb(55, 55, 55);
+
+      &:hover {
+        background-color: #53b7ab;
+        color: #fff2d8;
+      }
     }
-//     @media (min-width: 1024px) {
 
-  .body-wrapper{
-    background-color: #FAD079;
+
+  .modal {
+    background-color: #9a9a9aad;
+    
+  }
+
+  .modal-content {
+    background-color: #d7d7d7;
+    border: 1px #fefefe3d solid !important;
+    box-shadow: 0 4px 32px #0000003d;
+  }
+
+  .close {
+    color: #282828f7;
+  }
+
+  #auth-tabs .tab {
+    border: none;
+    background: none;
+    color: #a5a5a5;
+
+    &.active {
+      color: #000000;
+      border-bottom: 2px solid #242424;
+    }
+  }
+
+  .auth-form {
+    button {
+      background: #fbfbfb !important;
+      color: #000000;
+      transition: background 0.2s;
+
+      &:hover, &:focus{
+        background: #616161 !important;
+        color: #ffffff;
+      }
+    }
+  }
+
+  @media (min-width: 600px) {
+    background-color: #f3d4dc;
+  }
+
+  .body-wrapper {
+    background-color: #fad079;
     border: 1px solid black;
     border-bottom: none;
- 
 
-        @media (min-width: 600px) {  
-            margin-top: 50px;   
-            border-radius: 50px 50px 0  0;
+    @media (min-width: 600px) {
+      margin-top: 50px;
+      border-radius: 50px 50px 0 0;
     }
   }
 
-
-      header {
-
-          #header-neutral-theme 
-          .header-top {
-            @media (min-width: 600px) {
-              justify-content: space-around;
-          }
-
-           @media (min-width: 1024px) {}
-
-        }
-
-
-            body.neutral-theme #bookducks-logo-header {
-              background-image: url('../assets/logo/bookducks-logo-black.svg');     
-              
-            }
-        #bookducks-logo-header {
-          max-width: 170px;
-            // border: salmon 2px solid;
-          margin-top: 3rem;
-          margin-left: 1rem;
-
-
-
-
-
-          // @media (min-width: 768px) {
-          //   max-width: 300px;
-          // }
-
-
-        @media (min-width: 600px) {
-
-          left: 12rem;
-        }
-
-
-            @media (min-width: 1024px) {}
-        }
-
-        #logout-btn {
-        // color: #f9c243 ;
-        // color: #df6228;
-
-            background-color: #fdae0f;
-            border: 2px solid black !important;
-            box-shadow: 1px 1px 2px 0.3px  rgb(55, 55, 55);
-            padding-bottom: 26px;
-               
-            &:hover {
-              background-color: #53B7AB;
-              color: #fff2d8;
-            }  
-          }
-
-        h1 {
-        
-          // color: #70b77e;
-          color: #27a28f;
-        }
-
-
-
-
-        .show-reading-list-container {
-          background-color: #aadae7bf;
-
-          #show-reading-list {
-            background-color: #FBE1AE;
-            border: 2px solid black !important;
-            box-shadow: 1px 1px 2px 0.3px  rgb(55, 55, 55);
-
-
-            //             background-color: #fdae0f;
-            // border: 2px solid black !important;
-            // box-shadow: 1px 1px 2px 0.3px  rgb(55, 55, 55);
-            // padding-bottom: 26px;
-               
-            &:hover {
-              background-color: #53B7AB;
-              color: #fff2d8;
-            }  
-          }
-
-        }
-
+  header {
+    #header-neutral-theme .header-top {
+      @media (min-width: 600px) {
+        justify-content: space-around;
       }
+    }
 
-      .reading-list-h2 {
-        // background-color: #e6ccff;
-        // border: #e6ccff solid 8px;
-        border-radius: 8px  8px  0 0   !important ;
-        padding: 0.2rem 1rem;
+    body.neutral-theme #bookducks-logo-header {
+      background-image: url('../assets/logo/bookducks-logo-black.svg');
+    }
 
-        // color: #350085;
-        }
+    #bookducks-logo-header {
+      max-width: 170px;
+      margin-top: 3rem;
+      margin-left: 1rem;
 
-
-       select, .neutral-theme {
-        border-radius: 10px  10px  0 0   !important ;
+      @media (min-width: 600px) {
+        left: 12rem;
       }
+    }
 
-      #sort-select {
-        background-color: #8696ff;
-        color: white;
-        // border: #7b3abc solid 3px;
-        // border: #e6ccff solid 8px;
-        // border-bottom: none;
-        // font-size: 1.2rem;
-        // letter-spacing: 1px;
-        // padding: 0.4rem;
-        // height: 60px;
+    #logout-btn {
+      background-color: #fdae0f;
+      border: 2px solid black !important;
+      box-shadow: 1px 1px 2px 0.3px rgb(55, 55, 55);
+      padding-bottom: 26px;
+
+      &:hover {
+        background-color: #53b7ab;
+        color: #fff2d8;
+      }
+    }
+
+    h1 {
+      color: #27a28f;
+    }
+
+    .show-reading-list-container {
+      
+
+      #show-reading-list {
+        background-color: #fbe1ae;
+        border: 2px solid black !important;
+        box-shadow: 1px 1px 2px 0.3px rgb(55, 55, 55);
+
+        &:hover {
+          background-color: #53b7ab;
+          color: #fff2d8;
+        }
+      }
+    }
+  }
+
+  .reading-list-h2 {
+    border-radius: 8px 8px 0 0 !important;
+    padding: 0.2rem 1rem;
+  }
 
 
-        @media (min-width: 600px) {
+
+  #sort-select {    
+
+    background-color: #8696ff;
+    color: white;
+    padding: 0.4rem;
+    margin-bottom: 0;
+    border-radius: 10px 10px 0 0 !important;
+
+      @media (min-width: 600px) {
         border: #e6ccff solid 8px;
         border-bottom: none;
         font-size: 1.2rem;
         letter-spacing: 1px;
-        padding: 0.4rem;
-        height: 60px;
-
-        }
       }
+  }
 
+  .reading-list-wrapper {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 1.5rem;
+    padding: 1rem 0;
+    scroll-padding: 0 1rem;
+    overflow-y: hidden;
+    background-color: #e6ccff;
+    border-radius: 15px 15px 0 0;
 
-      .reading-list-wrapper {
-          display: flex;
-          overflow-x: auto;
-          scroll-snap-type: x mandatory;
-          gap: 1.5rem;
-          padding: 1rem 0;
-          scroll-padding: 0 1rem;
-          overflow-y: hidden;
-          background-color: #e6ccff;
-          border-radius:15px 15px 00;
+    &::-webkit-scrollbar {
+      height: 10px;
+    }
 
-            &::-webkit-scrollbar {
-            height: 10px;                  
-          }
-          &::-webkit-scrollbar-track {
-            // background: transparent;      
-            // background: #FC9AAE;  
-            background: #5302f4;  
-            // border-radius: 10px;    
-          }
-          &::-webkit-scrollbar-thumb {
-            // background-color: #d4f3dc;    
-            // background-color: #843cd5;    
-            background-color: #ff0090;    
-            border-radius: 4px;
-            border: 2px solid transparent;
-            background-clip: content-box;  
-          }
-  
+    &::-webkit-scrollbar-track {
+      background: #5302f4;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: #ff0090;
+      border-radius: 4px;
+      border: 2px solid transparent;
+      background-clip: content-box;
+    }
+  }
+
+  .book-card {
+    background-color: #caf9ca;
+    border: 2.5px solid #7b3abc;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px #0000001a;
+  }
+
+  .book-card-content {
+    border-color: #ccb9df;
+  }
+
+  .heart-btn {
+    background-color: transparent;
+  }
+
+  footer {
+    background-color: #65d7c9;
+    color: #000000;
+  }
 }
-      
-
-
-
-
-      .book-card {
-        // background-color: #eaffea;
-        background-color: #caf9ca;
-        // border: 1px solid #00a38b;
-        border: 2.5px solid #7b3abc;
-        border-radius: 10px;
-        box-shadow:0 2px 6px #0000001a;
-      }
-
-      .book-card-content{
-
-        border-color: #CCB9DF;
-      }
-
-      .heart-btn {
-        background-color: transparent;
-      }
-      
-
-      footer {
-        background-color: #65d7c9;
-        color: #000000;
-      }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-// Gamla:
-// OLD.theme-light {
-
-//     background-color: #efefeb ;
-//     color: #1D1D1D;
-
-//     header {
-
-//         #logout-btn {
-//             color: #f9c243 ;
-//         }
-//     }
-
-
-//   h1 {
-     // color: #f7c948;
-//     color: #f9c243;
-//   }
-
-
-
-//   .show-reading-list-container {
-
-//     background-color: #efefebbf;
-
-//   }
-
-//   .reading-list-container {
-//     border-color: #ffb300;
-// }
-
-//    #show-reading-list {
-//     background-color: #f9c243;
-//     border: 2px solid black !important;
-//   }
-
-   // .reading-list-wrapper{
-   //   border: rgb(0, 157, 255) solid 1px !important;
-   // }
-
-
-
-  // .reading-list-item{
-   //   border: #e6592e solid 1px !important;
-   // }
-
-   // .book-card {
-    //   border: 1px solid #00a38b;
-   //     box-shadow:0 2px 6px #0000001a;
-  // }
-
-//   .heart-btn {
-//     background-color: transparent;
-//   }
-
-//   footer {
-//     background-color: #69695d;
-//     color: #F8F7E5;
-//   }
-
-// }

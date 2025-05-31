@@ -1,5 +1,14 @@
 footer{
-    display: none;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        padding: 1.5rem 1rem;
+        margin-top: auto;
+        line-height: 1.4;
+        font-weight: 600;
+        letter-spacing: 0.4px;
 }
 
 @media (min-width: 600px) {
@@ -20,11 +29,6 @@ footer{
         letter-spacing: 0.4px;
 
         
-
-
-        #bookducks-logo-footer{
-            max-width: 170px;
-        }
 
         .footer-bottom {
             opacity: 0.7;

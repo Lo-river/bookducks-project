@@ -85,11 +85,11 @@ loginForm.addEventListener('submit', e => {
         showLoggedInUser();
         authModal.style.display = 'none';
       } else {
-        alert('Login failed. Försök igen!');
+        alert('Inloggning misslyckades.');
       }
     })
     .catch(() => {
-      alert('Något gick visst fel 😬');
+      alert('Något gick fel vid inloggningen.');
     });
 });
 
@@ -132,7 +132,7 @@ function showLoggedOutUser() {
   }
 }
 
-// Kontroll om användaren är inloggad
+// Check if user is logged in
 function checkLoggedInUser() {
   if (localStorage.getItem('bookducksJWT')) {
     showLoggedInUser();

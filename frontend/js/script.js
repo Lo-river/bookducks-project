@@ -85,10 +85,11 @@ function showBooks(books) {
       ? `<img src="assets/icons/heart-btn-f55454-fill.svg" alt="Remove from list" class="heart-icon">`
       : `<img src="assets/icons/heart-btn-black.svg" alt="Add to list" class="heart-icon">`;
 
+      // create book card
     const card = document.createElement('article');
     card.className = 'book-card';
 
-  
+  // show heart icon only if logged in
     const buttonHtml = isUserLoggedIn()
       ? `<button class="heart-btn ${btnClass}" data-bookid="${book.id}">${iconSvg}</button>`
       : '';
@@ -234,12 +235,12 @@ async function fetchAndShowReadingList(sortBy = null) {
     readingListSection.innerHTML = `
       <div class="reading-list-controls">
         <h2 class="reading-list-h2">Din läslista:</h2>
-        <label for="sort-select"></label>
-        <select id="sort-select">
-          <option value="">Sortera</option>
-          <option value="title">Titel A-Ö</option>
-          <option value="author">Författare A-Ö</option>
-        </select>
+            <label for="sort-select"></label>
+            <select id="sort-select">
+              <option value="">Sortera</option>
+              <option value="title">Titel A-Ö</option>
+              <option value="author">Författare A-Ö</option>
+            </select>
       </div>
       <div class="reading-list-wrapper"></div>
     `;
@@ -319,4 +320,4 @@ init();
 
 
 
-//For reading-list if I want author there: <span>av ${book.author}</span> under book.title
+//For reading-list if I want to include author there: <span>av ${book.author}</span> under book.title

@@ -1,44 +1,14 @@
-// .reading-list-section{
-//     display: flex;
-// }
-
-// Tillfälligt stängd för att testa reading-list slut
-// .reading-list-wrapper{
-//     display: flex;
-//     flex-direction: row;
-//     overflow: auto;
-//     scroll-snap-type: x mandatory;
-//     gap: 3rem;
-//     padding-bottom: 1rem;
-//     margin-bottom: 0.1rem;
-
-//     -webkit-overflow-scrolling: touch ;
-//       padding-left: 0.5rem;    
-//       margin-top: 1rem;
-
-//   @media (min-width: 600px) {
-//     border-top: 0.2rem solid;
-
-
-//   }
-
-// }
-
-// .reading-list-container {
-//   border-bottom: 2px solid;
-//   max-width: 1200px;
-//   margin: 0 auto;
-//   padding: 1rem;
-// }
 
 .reading-list-controls {
     display: flex;
     justify-content: space-between;
 }
 
-#sort-select {
-    margin-right: 1rem ;
 
+
+
+#sort-select {
+    margin-right: 1rem;
 }
 
 .reading-list-wrapper {
@@ -57,7 +27,7 @@
     background: transparent;      
   }
   &::-webkit-scrollbar-thumb {
-    background-color: #f9c243;    //CHANGE IN THEME 
+    background-color: #f9c243;    
     border-radius: 4px;
     border: 2px solid transparent;
     background-clip: content-box;  
@@ -69,9 +39,7 @@
     position: relative;
     flex: 0 0 auto;
     scroll-snap-align: start;
-    // max-width: 110px;
     border-radius: 10px;    
-    // padding-left: 10px;
     padding: 1.2rem 0.9rem;
 
     img, #cover 
@@ -116,7 +84,6 @@
     }
 
     @media (min-width: 768px) {
-        // width: calc(50% - 0.5rem);
 
     
         
@@ -152,7 +119,6 @@
     
 
     @media (min-width: 1024px) {
-        // width: calc(33.333% - 0.5rem);
 
 
 
@@ -163,8 +129,7 @@
             bottom: 4.5rem;
             z-index: 1;
 
-            // top: 200px;
-            // right: 8px;
+         
             background-color: #fff;
             border-radius: 50%;
             width: 24px;
